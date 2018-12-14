@@ -1,0 +1,10 @@
+_esy
+npm-debug.log
+.merlin
+yarn-error.log
+node_modules/
+_build
+_release
+test-esy-release-dune-build.install
+.DS_Store
+*.install

@@ -1,0 +1,49 @@
+
+{
+  "name": "test-esy-release-dune-build",
+  "version": "0.0.0",
+  "description": "My Project",
+  "esy": {
+    "build": "EsyReleaseDuneBuildApp.exe",
+    "buildsInSource": "_build",
+    "release": {
+      "releasedBinaries": [
+        "TestEsyReleaseDuneBuildApp.exe"
+      ]
+    }
+  },
+  "buildDirs": {
+    "test": {
+      "require": ["test-esy-release-dune-build.lib"],
+      "main": "TestTestEsyReleaseDuneBuild",
+      "name": "TestTestEsyReleaseDuneBuild.exe"
+    },
+    "library": {
+      "name": "test-esy-release-dune-build.lib",
+      "namespace": "TestEsyReleaseDuneBuild"
+    },
+    "executable": {
+      "require": ["test-esy-release-dune-build.lib"],
+      "main": "TestEsyReleaseDuneBuildApp",
+      "name": "TestEsyReleaseDuneBuildApp.exe"
+    }
+  },
+  "scripts": {
+    "test": "esy x TestTestEsyReleaseDuneBuild.exe"
+  },
+  "dependencies": {
+    "@opam/dune": "*",
+    "@esy-ocaml/reason": "*",
+    "refmterr": "*",
+    "ocaml": "~4.6.0",
+    "pesy": "*",
+    "esy-release-dune-build": "*"
+  },
+  "devDependencies": {
+    "@esy-ocaml/merlin": "*"
+},
+"resolutions": {
+"esy-release-dune-build": "link:../esy-release-dune-build/_release",
+"pesy": "link:/Users/manas/development/prometheansacrifice/pesy/re/_release"
+}
+}
