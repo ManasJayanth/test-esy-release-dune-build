@@ -46,7 +46,6 @@
     "@esy-ocaml/merlin": "*"
   },
   "resolutions": {
-    "esy-release-dune-build": "link:../esy-release-dune-build/_release",
-    "pesy": "link:/Users/manas/development/prometheansacrifice/pesy/re/_release"
+    "esy-release-dune-build": "link:../esy-release-dune-build/_release"
   }
 }
